@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>1688 工厂判定助手</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="header">
+        <div>
+          <h1>工厂判定</h1>
+          <p>读取当前 1688 页面并查询爱企查</p>
+        </div>
+        <button id="refreshButton" class="icon-button" title="重新检测" aria-label="重新检测">
+          <span aria-hidden="true">↻</span>
+        </button>
+      </header>
+
+      <section id="statusCard" class="status-card pending">
+        <div id="statusLabel" class="status-label">准备检测</div>
+        <div id="resultLabel" class="result-label">请打开 1688 公司或商品页面</div>
+      </section>
+
+      <dl class="details">
+        <div>
+          <dt>公司名称</dt>
+          <dd id="companyName">-</dd>
+        </div>
+        <div>
+          <dt>经营范围</dt>
+          <dd id="businessScope">-</dd>
+        </div>
+        <div>
+          <dt>判定依据</dt>
+          <dd id="reason">-</dd>
+        </div>
+      </dl>
+
+      <a id="searchLink" class="search-link" href="#" target="_blank" rel="noreferrer">打开爱企查页面</a>
+
+      <section class="history-section">
+        <div class="history-header">
+          <h2>历史记录</h2>
+          <span id="historyCount" class="history-count">0 条</span>
+        </div>
+        <ul id="historyList" class="history-list">
+          <li class="history-empty">暂无查询记录</li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

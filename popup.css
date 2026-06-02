@@ -1,0 +1,252 @@
+:root {
+  color-scheme: light;
+  font-family: "Microsoft YaHei", "Segoe UI", Arial, sans-serif;
+  color: #1f2937;
+  background: #f6f7f9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 360px;
+  min-height: 460px;
+  margin: 0;
+  background: #f6f7f9;
+}
+
+.shell {
+  padding: 16px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+p {
+  margin: 5px 0 0;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.icon-button {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #d5dae3;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #334155;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.icon-button:hover {
+  border-color: #94a3b8;
+  background: #f8fafc;
+}
+
+.status-card {
+  padding: 16px;
+  border: 1px solid #dce2ea;
+  border-radius: 8px;
+  background: #ffffff;
+  margin-bottom: 14px;
+}
+
+.status-card.factory {
+  border-color: #6fcf97;
+  background: #f0fbf5;
+}
+
+.status-card.trade {
+  border-color: #f2c36b;
+  background: #fff8e8;
+}
+
+.status-card.error {
+  border-color: #f19595;
+  background: #fff1f1;
+}
+
+.status-label {
+  color: #64748b;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.result-label {
+  min-height: 32px;
+  font-size: 26px;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.details {
+  margin: 0;
+  border: 1px solid #dce2ea;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.details div {
+  padding: 12px;
+  border-bottom: 1px solid #eef1f5;
+}
+
+.details div:last-child {
+  border-bottom: 0;
+}
+
+dt {
+  color: #64748b;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+dd {
+  margin: 0;
+  color: #1f2937;
+  font-size: 13px;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.search-link {
+  display: block;
+  width: 100%;
+  margin-top: 14px;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #0f766e;
+  text-align: center;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.search-link.disabled {
+  pointer-events: none;
+  color: #94a3b8;
+}
+
+/* ── 历史记录 ── */
+
+.history-section {
+  margin-top: 18px;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 14px;
+}
+
+.history-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.history-header h2 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.history-count {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.history-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.history-empty {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 12px;
+  padding: 16px 0;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background: #ffffff;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  text-decoration: none;
+}
+
+.history-item:hover {
+  border-color: #94a3b8;
+  background: #f8fafc;
+}
+
+.history-badge {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 20px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.history-badge.factory {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.history-badge.trade {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.history-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.history-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1f2937;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.history-time {
+  font-size: 11px;
+  color: #94a3b8;
+  margin-top: 2px;
+}

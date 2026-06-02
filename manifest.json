@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "1688 工厂判定助手",
+  "description": "点击扩展后读取当前 1688 页面公司名称，并通过百度爱企查经营范围判断工厂或贸易。",
+  "version": "0.1.0",
+  "permissions": ["activeTab", "scripting", "tabs", "storage"],
+  "host_permissions": [
+    "*://*.1688.com/*",
+    "https://aiqicha.baidu.com/*"
+  ],
+  "action": {
+    "default_title": "1688 工厂判定助手",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.1688.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
